@@ -30,93 +30,61 @@
 <main class="main">
   <section class="section__info section__team">
     <div class="team">
+      <div class="team__item">
+        <div class="bg__details">
+          <details>
+        <summary>
+          <h2>Raddan</h2>
+          <p>Илья Мулярчук</p>
+        </summary>
+        
+          <h2>РОЛЬ</h2>
+            <p>Carry</p>
 
+          <h2>БИОГРАФИЯ</h2>
+            <p>Выступает за Team Spirit с декабря 2020 <br>
+                Родной город - Буча, Украина</p> 
+
+              <p>Дата рождения: 12 марта 2003</p>
+
+              <ul>
+                <h2>Любимые герои:</h2>
+                <li>Terrorblade</li>
+                <li>Anti-Mage</li>
+                <li>Morphling</li>
+              </ul>
+      </details>
+        </div>
       
 
+      <details>
+        <summary>
+          <h2>Raddan</h2>
+          <p>Илья Мулярчук</p>
+        </summary>
+        <div class="team__item">
+          <h2>РОЛЬ</h2>
+            <p>Carry</p>
 
-        <ul>
-            <li data-img="/img/raddan.jpg">
-                <a href="#">
-                    <h2>Raddan</h2>
-                    <p>Илья Мулярчук</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о Raddan.</p>
-                </div>
-            </li>
-            <li data-img="/img/larl.jpg">
-                <a href="#">
-                    <h2>LARL</h2>
-                    <p>Илья Мулярчук</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о LARL.</p>
-                </div>
-            </li>
-            <li data-img="/img/collapse.jpg">
-                <a href="#">
-                    <h2>Collapse</h2>
-                    <p>Магомед Халилов</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о Collapse.</p>
-                </div>
-            </li>
-            <li data-img="/img/mira.jpg">
-                <a href="#">
-                    <h2>Mira</h2>
-                    <p>Мирослав Колпаков</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о Mira.</p>
-                </div>
-            </li>
-            <li data-img="/img/miposhka.jpg">
-                <a href="#">
-                    <h2>Miposhka</h2>
-                    <p>Ярослав Найденов</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о Miposhka.</p>
-                </div>
-            </li>
-            <li data-img="/img/silent.jpg">
-                <a href="#">
-                    <h2>Silent</h2>
-                    <p>Айрат Газиев</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о Silent.</p>
-                </div>
-            </li>
-            <li data-img="/img/korb3n.jpg">
-                <a href="#">
-                    <h2>KORB3N</h2>
-                    <p>Дмитрий Белов</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о KORB3N.</p>
-                </div>
-            </li>
-            <li data-img="/img/dklana.jpg">
-                <a href="#">
-                    <h2>DKLana</h2>
-                    <p>Руслана Берест</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о DKLana.</p>
-                </div>
-            </li>
-            <li data-img="/img/sikle.jpg">
-                <a href="#">
-                    <h2>Sikle</h2>
-                    <p>Марк Лерман</p>
-                </a>
-                <div class="additional-info" style="display: none;">
-                    <p>Дополнительная информация о Sikle.</p>
-                </div>
-            </li>
-        </ul>
+          <h2>БИОГРАФИЯ</h2>
+            <p>Выступает за Team Spirit с декабря 2020 <br>
+                Родной город - Буча, Украина</p> 
+
+              <p>Дата рождения: 12 марта 2003</p>
+
+              <ul>
+                <h2>Любимые герои:</h2>
+                <li>Terrorblade</li>
+                <li>Anti-Mage</li>
+                <li>Morphling</li>
+              </ul>
+        </div>
+            
+      </details>
+
+      
+    </div>
+
         <div class="team__img">
             <img id="teamImage" src="/img/dotateam_bg.jpg" alt="Командное фото">
         </div>
@@ -131,42 +99,5 @@
   </div>
 </footer>
 
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-      // Получаем все элементы списка
-      const listItems = document.querySelectorAll('.team li');
-      // Получаем элемент изображения
-      const teamImage = document.getElementById('teamImage');
-  
-      // Добавляем обработчик событий для каждого элемента списка
-      listItems.forEach(item => {
-          item.addEventListener('click', (event) => {
-              event.preventDefault(); // Отменяет стандартное действие для ссылок
-  
-              // Получаем путь к изображению из data-атрибута
-              const imgSrc = item.getAttribute('data-img');
-              // Меняем источник изображения
-              teamImage.src = imgSrc;
-  
-              // Показываем или скрываем дополнительную информацию
-              const additionalInfo = item.querySelector('.additional-info');
-              if (additionalInfo.style.display === 'none' || additionalInfo.style.display === '') {
-                  // Скрываем все остальные дополнительные информации
-                  listItems.forEach(li => {
-                      const info = li.querySelector('.additional-info');
-                      if (info) info.style.display = 'none';
-                  });
-                  // Показываем текущую дополнительную информацию
-                  additionalInfo.style.display = 'block';
-              } else {
-                  // Скрываем, если она уже была показана
-                  additionalInfo.style.display = 'none';
-              }
-          });
-      });
-  });
-  </script>
 </body>
 </html>
