@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 body {
@@ -11,6 +12,10 @@ body {
   background-color: rgb(32, 32, 32);
   text-align: justify;
   color:#bebebe;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 h1 {
   text-align: center;
@@ -113,6 +118,10 @@ display: flex;
   margin: 0 auto;
 }
 
+.main {
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
 
 .main__photo {
     width: 70%;
@@ -133,36 +142,24 @@ display: flex;
 }
 
 
-
-
-
-.footer__warp {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px 0;
-  background-color: #e0e0e0;
-  box-shadow: 0px 0px 8px rgb(212, 212, 212);
-  margin-top: 20px;
-  width: 100%;
-
-
-
-
-  
+footer {
+  margin-top: auto;
 }
 
+
+
 .footer__warp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  clear: both;
+  position: relative;
+  width: 100%;
   padding: 20px 0;
   background-color: #e0e0e0;
   box-shadow: 0px 0px 8px rgb(212, 212, 212);
   margin-top: 20px;
-  }
-
-
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
 
 .footer a:hover {
   color: #979797;
@@ -218,6 +215,14 @@ display: flex;
   height: 100vh; 
   position: relative; 
   justify-content: space-between;
+  position: relative;
+
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  height: calc(100vh - 200px); 
+  position: relative;
+  justify-content: space-between;
 }
 
 details {
@@ -228,7 +233,6 @@ details {
   border: 3px solid #979797;
   box-shadow: 0px 0px 8px rgb(212, 212, 212);
   border-radius: 15%;
-  margin-bottom: 5%;
   color: #676770;
   background-color:#bebebe;
   -webkit-user-select: none;
@@ -236,9 +240,13 @@ details {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+  display: block;
+  clear: both;
 }
 
-
+.team__desc {
+  padding: 10px 25px;
+}
 
 
 .team__item {
@@ -249,7 +257,7 @@ details {
 
 summary {
   list-style-type: none;
-  
+  padding: 10px 25px;
 }
 
 
@@ -286,9 +294,6 @@ details[open] {
   transform: translateY(-50%); 
 }
 
-
-
-
 .team h2 {
   margin: 0 0 5px 0; 
 }
@@ -297,32 +302,59 @@ details[open] {
   margin: 0; 
 }
 
-.additional-info {
-    margin-top: 10px; /* Отступ сверху для дополнительной информации */
-    padding: 10px;    /* Внутренние отступы */
-    border: 1px solid #bbb; /* Граница для выделения информации */
-    background-color: #f9f9f9; /* Фоновый цвет */
-    border-radius: 5px; /* Закругление углов */
-}
-
-.team__img img {
-  width: 100%; 
+.team__img {
+  width: 50%; 
   height: 100%; 
-  object-fit: cover;
   border: 3px solid #979797;
   box-shadow: 0px 0px 8px rgb(212, 212, 212);
   border-radius: 15%;
+  background-size: cover; 
+  margin-left: 10%;
+  
 }
 
 
-.team__img img {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover;
-  border: 3px solid #979797;
-  box-shadow: 0px 0px 8px rgb(212, 212, 212);
-  border-radius: 15%;
+.team__img {
+  background-image: url('/img/dotateam_bg.jpg');
 }
+
+.team__img.open-RADDAN {
+  
+  background-image: url('./img/raddan.jpg');
+}
+
+.team__img.open-LARI {
+  background-image: url('./img/larl.jpg');
+}
+
+.team__img.open-COLLAPSE {
+  background-image: url('./img/colapse.jpg');
+}
+
+.team__img.open-MIRA {
+  background-image: url('./img/mira.jpg');
+}
+
+.team__img.open-MIPOSHKA {
+  background-image: url('./img/miposhka.jpg');
+}
+
+.team__img.open-SILENT {
+  background-image: url('./img/silent.jpg');
+}
+
+.team__img.open-KORB3N {
+  background-image: url('./img/korb3n.jpg');
+}
+
+.team__img.open-DKLANA {
+  background-image: url('./img/dklana.jpg');
+}
+
+.team__img.open-SIKLE {
+  background-image: url('./img/sikle.jpg');
+}
+
 
 
 
@@ -392,6 +424,30 @@ details[open] {
   grid-template-columns: 400px 400px;
   grid-template-rows: 400px 400px;
   
+}
+
+
+/* -----------------contacts----------------- */
+
+.contacts__item img {
+  width: 30px;
+  height: 30px;
+}
+
+.section__contacts{
+  justify-content: center;
+}
+
+.contacts {
+  display: flex;
+}
+.contacts__item {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
