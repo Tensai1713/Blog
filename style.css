@@ -254,7 +254,7 @@ footer {
 
 
 details {
-  width: 350px;
+  width: 330px;
   display: flex;
   flex-direction: column;
   cursor: default;
@@ -331,12 +331,33 @@ details[open] {
   
 }
 
+
+
 .team__item {
+  margin: 0 auto;
+}
+
+.bg__details {
+  overflow:auto;
   margin: 0 auto;
   height: 100%;
   width:400px;
-  overflow:auto;
 }
+
+
+.bg__details::-webkit-scrollbar {
+  width: 20px;
+}
+
+
+.bg__details::-webkit-scrollbar-thumb {
+  background: #676770;
+  border-radius: 10px;
+}
+
+
+
+
 
 
 
